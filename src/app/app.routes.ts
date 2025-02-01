@@ -16,7 +16,7 @@ import { BookTourComponent } from './pages/book-tour/book-tour.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'vehicles', component: VehiclesComponent },
-  { path: 'booking/:vehicleId', component: BookingComponent },
+  { path: 'booking', component: BookingComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'confirmation', component: ConfirmationComponent },
   { path: 'my-bookings', component: MyBookingsComponent },

@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-booking',
-  standalone: true,
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.scss']
 })
 export class BookingComponent {
-  vehicleId: string | null = '';
+  vehicle: any;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
-    this.vehicleId = this.route.snapshot.paramMap.get('vehicleId');
+  constructor(private router: Router) {
+    this.vehicle = this.router.getCurrentNavigation()?.extras.state?.['vehicle'] || {};
   }
 
   confirmBooking() {
-    this.router.navigate(['/payment']);
+    // Redirect to payment page (You can pass booking details via state)
+    this.router.navigate(['/payment'], { state: { vehicle: this.vehicle } });
   }
 }

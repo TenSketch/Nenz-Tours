@@ -1,0 +1,17 @@
+{
+  "routes": {
+    "/": {},
+    "/about-us": {},
+    "/book-tour": {},
+    "/booking": {},
+    "/confirmation": {},
+    "/my-account": {},
+    "/my-bookings": {},
+    "/our-services": {},
+    "/payment": {},
+    "/sign-in": {},
+    "/sign-up": {},
+    "/tourism": {},
+    "/vehicles": {}
+  }
+}
